@@ -1,0 +1,21 @@
+version: "3"
+services: 
+  # py38:
+  #   image: python:3.8
+  #   container_name: py38
+  #   volumes:
+  #     - ./code:/code
+  #   working_dir: /code
+  #   tty: true
+
+  httrack:
+    ports:
+      - "9001:9000"
+    build: ./docker/app
+    container_name: httrack
+    volumes:
+      - .:/var/www/html/
+    working_dir: /code
+
+    # links:
+    #   - db
