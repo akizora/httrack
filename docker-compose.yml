@@ -14,7 +14,7 @@ services:
     build: ./docker/app
     container_name: httrack
     volumes:
-      - .:/var/www/html/
+      - ./code:/code
     working_dir: /code
 
     # links:
